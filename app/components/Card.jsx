@@ -46,18 +46,18 @@ const Card = () => {
             </motion.span>
         </motion.div>
         {/* Text Content Section */}
-        <div 
-            className="pt-4">
+        <motion.div layoutId="card-text-content"
+            className="pt-4 w-fit ">
             <motion.h3 layoutId="card-title" className="text-lg font-semibold text-stone-800 leading-6">Storytelling</motion.h3>
-            <p className="text-sm font-medium text-stone-500 ">5 weeks · part-time</p>
-            <span className={`inline-block mt-3 bg-purple-100 text-purple-600 text-xs font-medium px-3 py-1 rounded-full ${
+            <motion.p layout className="text-sm font-medium text-stone-500 ">5 weeks · part-time</motion.p>
+            <motion.span layout className={`inline-block mt-3 bg-purple-100 text-purple-600 text-xs font-medium px-3 py-1 rounded-full ${
                 isHovered ? "bg-purple-200" : ""
             }`}
             
             >
             New!
-            </span>
-        </div>
+            </motion.span>
+        </motion.div>
         </motion.div>  
         ) : (
         <motion.div 
@@ -97,18 +97,19 @@ const Card = () => {
             </motion.span>
         </motion.div>
         {/* Text Content Section */}
-        <div 
-            className="pt-4">
+        <motion.div 
+            layoutId="card-text-content "
+            className="pt-4 w-fit">
             <motion.h3 layoutId="card-title" className="text-lg font-semibold text-stone-800 leading-6">Storytelling</motion.h3>
-            <p className="text-sm font-medium text-stone-500 ">5 weeks · part-time</p>
-            <span className={`inline-block mt-3 bg-purple-100 text-purple-600 text-xs font-medium px-3 py-1 rounded-full ${
+            <motion.p layout className="text-sm font-medium text-stone-500 ">5 weeks · part-time</motion.p>
+            <motion.span layout className={`inline-block mt-3 bg-purple-100 text-purple-600 text-xs font-medium px-3 py-1 rounded-full ${
                 isHovered ? "bg-purple-200" : ""
             }`}
             
             >
             New!
-            </span>
-        </div>
+            </motion.span>
+        </motion.div>
         </motion.div>  
         )}</AnimatePresence>
          </>
