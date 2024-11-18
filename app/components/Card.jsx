@@ -21,7 +21,7 @@ const Card = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={() => setShowExpanded(false)}
-            className=" rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[600px] cursor-pointer">
+            className=" rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[400px] cursor-pointer">
         {/* Image Section */}
         <motion.div layoutId="card-image" className={` relative overflow-hidden `}>
             <Image
@@ -29,7 +29,7 @@ const Card = () => {
             width={450}
             height={600}
             alt="Image Example"
-            className="w-full h-[400px] object-cover rounded-xl"
+            className="w-full h-[300px] object-cover rounded-xl"
             />
             <motion.span 
                 layoutId="badge"
@@ -55,6 +55,7 @@ const Card = () => {
             New!
             </motion.span>
         </motion.div>
+        <motion.p layout className=" pt-3 w-[400px] text-sm font-medium text-stone-500 ">We're grateful to have educated UX/UI Designers in 150+ countries and we're trusted by industry leading teams like Google, Figma, Revolut, and Shopify</motion.p>
         </motion.div>  
         ) : (
         <motion.div 
