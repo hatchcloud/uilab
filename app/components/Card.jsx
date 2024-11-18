@@ -32,10 +32,7 @@ const Card = () => {
             className="w-full h-[400px] object-cover rounded-xl"
             />
             <motion.span 
-                animate={{
-                    y: isHovered || showExpanded ? -40 : 0,
-                    opacity: isHovered || showExpanded ? 0 : 1,
-                }}
+                layoutId="badge"
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="absolute flex gap-2 items-center top-2 left-2 bg-stone-200/25 border border-stone-50 text-stone-600 text-xs font-semibold p-2 rounded-lg leading-none">
                 <span className=" flex items-center justify-center w-3 h-3 rounded-full border-2 border-pink-300">
@@ -75,7 +72,7 @@ const Card = () => {
                     opacity: isHovered ? 1 : 0, 
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20, }}
-                className="absolute rounded-2xl w-full h-full bg-slate-400/35 text-neutral-100 z-10 flex items-center justify-center"> Explore </motion.div>
+                className=" opacity-0 absolute rounded-2xl w-full h-full bg-slate-400/35 text-neutral-100 z-10 flex items-center justify-center"> Explore </motion.div>
             <Image
             src={imageSrc }          
             width={250}
@@ -84,8 +81,9 @@ const Card = () => {
             className="w-full h-48 object-cover rounded-xl"
             />
             <motion.span 
+            layoutId="badge"
                 animate={{
-                    y: isHovered ? -40 : 0, // Move up if hovered
+                    y: isHovered ? -60 : 0,
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 className="absolute flex gap-2 items-center top-2 left-2 bg-stone-200/25 border border-stone-50 text-stone-600 text-xs font-semibold p-2 rounded-lg leading-none">
