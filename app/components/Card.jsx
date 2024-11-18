@@ -21,7 +21,7 @@ const Card = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={() => setShowExpanded(false)}
-            className=" rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[400px] cursor-pointer">
+            className=" rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[400px] cursor-pointer max-w-[400px]">
         {/* Image Section */}
         <motion.div layoutId="card-image" className={` relative overflow-hidden `}>
             <Image
@@ -65,7 +65,7 @@ const Card = () => {
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={() => setShowExpanded(true)}
-            className="rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[250px] cursor-pointer">
+            className="rounded-3xl overflow-hidden border border-stone-200 bg-white hover:bg-stone-100 transition-colors duration-100 p-3 min-w-[250px] max-w-[200px] cursor-pointer">
         {/* Image Section */}
         <motion.div layoutId="card-image" className="relative overflow-hidden">
             <motion.div 
