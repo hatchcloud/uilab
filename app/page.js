@@ -15,7 +15,7 @@ export default function Home() {
             Tailwind
       </span>
       </div>
-      <div className="w-full lg:w-1/2 border min-h-[90%] rounded-xl border-neutral-300 p-8 flex justify-center items-center">
+      <div className="w-full lg:w-1/2 border min-h-[600px] max-h-[90%]  h-full rounded-xl border-neutral-300 p-8 flex justify-center items-center">
       <Card />
       </div>
     </div>
