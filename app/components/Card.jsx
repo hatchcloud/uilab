@@ -57,7 +57,7 @@ const Card = () => {
         </motion.div>
         <motion.p layout className=" pt-3 w-full  md:w-[400px] text-sm font-medium text-stone-500 ">We're grateful to have educated UX/UI Designers in 150+ countries and we're trusted by industry leading teams like Google, Figma, Revolut, and Shopify</motion.p>
         </motion.div>  
-        ) : (
+        ) : ( 
         <motion.div 
             initial={{ opacity: 0 }} 
             layoutId="card-indicator"
