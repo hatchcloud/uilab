@@ -53,7 +53,7 @@ const useMeasure = () => {
   const ReviewsList = ({ review }) => {
     return (
       <div className='flex items-center justify-center'>
-         <div className={`${review.color} h-10 w-10 p-[6px] rounded-full mr-1`} >
+         <div className={`${review.color} h-10 w-10 p-1 rounded-full mr-1`} >
             <div className='bg-black/30 h-full w-full text-xs rounded-full text-white flex justify-center items-center'>
             <p>{review.score}</p>
             </div>
@@ -86,14 +86,14 @@ const ScoreBanner = () => {
   }, [xTranslation, width]);
 
   return (
-    <div className='border flex rounded-full p-1 bg-zinc-800 border-zinc-900 gap-2'>
+    <div className='border flex rounded-full w-full lg:w-fit p-1 bg-zinc-800 border-zinc-900 gap-2'>
 
       <span className='bg-zinc-900 flex gap-1 text-white rounded-full h-12 px-5 py-3'> NPS 
         <Image src={Level} width={18} height={18} alt='icon' />
       </span>
 
       {/* Container */}
-      <div className='max-w-96 w-60 lg:w-80 relative overflow-hidden'>
+      <div className='w-full min-w-28 lg:w-80 relative overflow-hidden'>
         <div className='absolute w-6 top-0 left-0 h-full z-10 bg-gradient-to-r from-zinc-800 to-transparent'></div>
         <div className='absolute w-6 top-0 right-0  h-full z-10 bg-gradient-to-r from-transparent to-zinc-800'></div>
       <motion.div className='absolute mt-1 left-0 flex gap-4' ref={ref} style={{x: xTranslation}}>
