@@ -1,4 +1,4 @@
-'use client'
+
 import Card from "./components/Card";
 import ContactNav from "./components/ContactNav";
 import ScoreBanner from "./components/ScoreBanner";

@@ -1,10 +1,9 @@
 
 'use client'
-import { useRef, useEffect } from 'react'
+import { useRef, useEffect, useState } from 'react'
 import { Plus } from 'lucide-react';
 import Level from '@/public/vectors/level.svg'
 import Image from 'next/image';
-import useMeasure from 'react-use-measure';
 import { useMotionValue, motion, animate } from "framer-motion";
 
 
@@ -31,7 +30,24 @@ const reviews = [
     },
   ];
 
-
+const useMeasure = () => {
+    const ref = useRef();
+    const [bounds, setBounds] = useState({ width: 0 });
+  
+    useEffect(() => {
+      if (typeof window !== "undefined" && ref.current) {
+        const observer = new ResizeObserver(([entry]) => {
+          setBounds(entry.contentRect);
+        });
+        observer.observe(ref.current);
+  
+        return () => observer.disconnect();
+      }
+    }, []);
+  
+    return [ref, bounds];
+  };
+  
 
   
   const ReviewsList = ({ review }) => {
