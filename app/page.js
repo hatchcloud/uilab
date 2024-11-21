@@ -1,4 +1,4 @@
-
+'use client'
 import Card from "./components/Card";
 import ContactNav from "./components/ContactNav";
 import ScoreBanner from "./components/ScoreBanner";
@@ -6,7 +6,7 @@ import ScoreBanner from "./components/ScoreBanner";
 export default function Home() {
   return (
     <>
-         {/* Contact Section */}
+      {/* Contact Section */}
          <div className=" w-full h-screen flex flex-col lg:flex-row justify-center lg:justify-end items-center px-4 max-w-[1600px]">
         <div className="w-full lg:w-1/2  lg:min-h-[90%] flex justify-start gap-4 py-2 lg:py-8">
         <span className="flex gap-2 items-center top-2 left-2 bg-neutral-100/25 border border-neubg-neutral-50 text-neubg-neutral-600 text-sm font-medium p-2 rounded-lg leading-none h-fit">
