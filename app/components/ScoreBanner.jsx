@@ -64,7 +64,9 @@ const ScoreBanner = () => {
       repeatDelay: 0,
     });
   
-    return controls.stop;
+    return () => {
+        if (controls) controls.stop();
+    };
   }, [xTranslation, width]);
 
   return (
