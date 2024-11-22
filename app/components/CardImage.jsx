@@ -32,7 +32,7 @@ const CardImage = () => {
     onMouseEnter={() => setHovered(true)}
     onMouseLeave={() => setHovered(false)}
     >
-      <Image src={Placeholder} fill alt='image-card' className='z-0' />
+      <Image src={Placeholder} fill alt='image-card' className='z-0' placeholder='blur' />
       <AnimatePresence>
         {isHovered ? (<TitleExpanded /> ) : (<Title />) } 
       </AnimatePresence>
